@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Programa de Nacionalidade</h1>
+    Digite seu pais de origem: <input type="text" name="pais" id="pais">
+    <input type="submit" value="Enviar" onclick="Pesquisa()">
+    <p id="tes"></p>
+    <div id="resul">
+
+    </div>
+    
+    <script>     
+        var res = window.document.querySelector('div#resul')
+        var tes = window.document.querySelector('p#tes')
+        function Pesquisa(){
+            var pais = String(window.document.querySelector('input#pais').value.toLowerCase())
+            tes.innerHTML = `País digitado: ${pais}.`
+            if(pais == 'brasil'){
+                res.innerHTML = 'Nacionalidade = Brasileiro.'
+            }else if(pais == 'africa') {
+                res.innerHTML = 'Nacionalidade = Africano'
+            } else {
+                res.innerHTML = 'Nacionalidade = Estrangero/indefinido'
+            }
+                
+        }
+    </script>
+</body>
+</html>
