@@ -1,4 +1,6 @@
 function Enviar(){
+    
+    var form = document.getElementById('form')
     var numero1 = document.getElementById('numero1')
     var num1 = Number(numero1.value)
     var numero2 = document.querySelector('input#numero2')
@@ -6,6 +8,7 @@ function Enviar(){
     var res = document.querySelector('div#res')
     var pas = document.getElementById('passo')
     var passo = Number(pas.value)
+
     if(num1 == "" || num2 == "" || passo == ""){
         window.alert('[ERRO] Verifique os numeros digitados e tente novamente!')
     } else{
@@ -25,5 +28,6 @@ function Enviar(){
             }
         }
         res.innerHTML +=  ` 🏴 `
+        form.reset();
     }
 }
